@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import Counter from './Counter';
 
 const CounterParent = () => {
-    const [initialCount, setInitialCount] = useState(0);   // Directly hold the input value
+    const [initialCount, setInitialCount] = useState(0);  
     const [resetCounter, setResetCounter] = useState(0);
     const [showCounters , setshowCounters] = useState(false);
 
-    // Function to handle input change and store it in initialCount
+   
     const handleInputChange = (e) => {
-        setInitialCount(Number(e.target.value));  // Convert input to a number and set directly to initialCount
+        setInitialCount(Number(e.target.value)); 
     };
 
-    // Function to trigger reset for counters
+   
     const handleSubmit = () => {
-        setResetCounter(resetCounter +1);  // Toggle resetCounter to force reset on counters
+        setResetCounter(resetCounter +1);  
         setshowCounters (true);
 
     };
@@ -30,7 +30,7 @@ const CounterParent = () => {
                 value={initialCount}
                 onChange={handleInputChange} />
 
-            <button onClick={handleSubmit}>Submit</button>  {/* Submit button */}
+            <button onClick={handleSubmit}>Submit</button> 
             </>  )}
 
 
